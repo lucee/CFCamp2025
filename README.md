@@ -17,3 +17,9 @@ docker compose up
 ```
 
 And you can then access the server on http://localhost:8888
+
+### AI Examples
+
+To run the AI examples, you need to configure an AI endpoint with the name "claude" in the Lucee Admin or Application.cfc
+
+
