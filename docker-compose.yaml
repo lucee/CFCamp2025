@@ -1,0 +1,23 @@
+services:
+  lucee:
+    image: lucee/lucee:7.0.0.242-RC
+    ports:
+      - "8888:8888" # tomcat
+      - "8080:80" # nginx
+    volumes:
+      - ./code/:/var/www
+      - "./patches:/opt/lucee/server/lucee-server/patches" # used to inject custom patch
+    environment:
+      - LUCEE_ADMIN_PASSWORD=qwerty
+
+#  mysql: 
+#    image: mysql:latest
+#    ports:
+#      - 3306:3306
+#    expose:
+#      - 3306
+#    environment:
+#    - MYSQL_ROOT_PASSWORD=demopass
+#    - MYSQL_DATABASE=test
+
+# docker-compose up -d
